@@ -88,8 +88,8 @@ body {
 }
 .link-container {
     display: flex;
-    justify-content: space-around;
-    width: 1200px;
+    justify-content: space-between;
+    width: 1000px;
     -webkit-user-drag: none;
     user-select: none;
     -moz-user-select: none;
@@ -97,7 +97,7 @@ body {
     -ms-user-select: none;
 }
 .buts {
-    width: 120px;
+    width: 100px;
     padding: 5px;
     margin: 10px;
     justify-content: center;
@@ -105,16 +105,20 @@ body {
     color: white;
     background-color: transparent;
     background-repeat: no-repeat;
-    font-size: 16px;
     text-align: center;
     display: inline-block;
     text-decoration: none;
     cursor: pointer;
-    background:#0c579c;
-    border-radius:4px;
+}
+.buts:last-child {
+    border: 2px solid #0c579c;
+    border-radius: 20px;
+    color:#0c579c;
 }
 .buts:hover {
-    background:#1C85BB;
+    border: 2px solid #ffffff;
+    border-radius: 20px;
+    color:#ffffff;
 }
 .soc a:hover {
     transform: scale(1.4);
@@ -128,6 +132,10 @@ body {
 .social {
     display: inline-block;
     margin-left: 10px;
+}
+.social img {
+    width: 25px;
+    height: 25px;
 }
 .url {
     display: flex;
@@ -167,6 +175,7 @@ body {
     .burger {
         display: flex;
         cursor: pointer;
+        margin-right: 20px;
     }
 }
 @media (max-width: 290px) {
