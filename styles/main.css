@@ -64,22 +64,32 @@ body {
 .pages a {
     font-size: 20px;
 }
-.logo {
-    padding-bottom: 10px;
-}
-.logo img {
-    width: 70px;
-    height: 70px;
+.logos {
+    display: flex;
+    flex-direction: row;
     -webkit-user-drag: none;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
 }
+.logo {
+    padding-bottom: 10px;
+}
+.logo img {
+    width: 70px;
+    height: 70px;
+}
+.logo-text {
+    color:white;
+    font-size: 30px;
+    padding-top: 23px;
+    padding-left: 10px;
+}
 .link-container {
     display: flex;
     justify-content: space-around;
-    width: 1000px;
+    width: 1200px;
     -webkit-user-drag: none;
     user-select: none;
     -moz-user-select: none;
@@ -87,33 +97,24 @@ body {
     -ms-user-select: none;
 }
 .buts {
-    font-size: 20px;
     width: 120px;
+    padding: 5px;
+    margin: 10px;
     justify-content: center;
     align-items: center;
     color: white;
     background-color: transparent;
     background-repeat: no-repeat;
     font-size: 16px;
+    text-align: center;
     display: inline-block;
-    line-height: 4;
-    text-decoration: none; /* Убираем подчеркивание */
+    text-decoration: none;
     cursor: pointer;
+    background:#0c579c;
+    border-radius:4px;
 }
-.buts:after {
-    background-color: #119cdd; /* Цвет линии при наведении на нее курсора мыши */
-    display: block;
-    content: "";
-    right: 0;
-    height: 2px; /* Высота линии */
-    width: 0;
-    -webkit-transition: width .3s ease-in-out;
-    -moz--transition: width .3s ease-in-out;
-    transition: width .3s ease-in-out;
-}
-.buts:hover:after,
-.buts:focus:after {
-    width: 80%;
+.buts:hover {
+    background:#1C85BB;
 }
 .soc a:hover {
     transform: scale(1.4);
@@ -141,4 +142,35 @@ body {
 }
 .burger {
     display: none;
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+@media (max-width: 1210px) {
+    .buts {
+        display: none;
+    }
+    .link-container {
+        justify-content: space-between;
+    }
+    .soc {
+        margin-right: 50px;
+    }
+}
+@media (max-width: 540px) {
+    .soc {
+        display: none;
+    }
+    .link-container {
+        justify-content: space-between;
+    }
+    .burger {
+        display: flex;
+        cursor: pointer;
+    }
+}
+@media (max-width: 290px) {
+    .logo-text{
+        display: none;
+    }
 }
