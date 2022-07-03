@@ -46,7 +46,7 @@ html {
     background-size: cover;
 }
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 .fixed {
     max-width: 1800px;
@@ -154,6 +154,65 @@ body {
     width: 50px;
     height: 50px;
 }
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    padding-top: 100px;
+    height: 100%;
+}
+.firstBlock{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    height: 100%;
+}
+.mainText {
+    color:#ffffff;
+    font-size: 40px;
+    padding-bottom: 15px;
+}
+.secondText{
+    color:#0c579c;
+    font-size: 26px;
+    padding-bottom: 60px;
+}
+.buttonMain {
+    border: 2px solid #0c579c;
+    border-radius: 20px;
+    padding: 10px;
+    color:#ffffff;
+    text-decoration: none;
+}
+.firstBlock a {
+    font-size: 18px;
+    cursor: pointer;
+}
+.secondBlock {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    height: 100%;
+    margin-top: 60px;
+}
+.secondBlock img {
+    width: 630px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items:center;
+}
 @media (max-width: 1210px) {
     .buts {
         display: none;
@@ -163,6 +222,17 @@ body {
     }
     .soc {
         margin-right: 50px;
+    }
+}
+@media (max-width: 700px) {
+    .mainText {
+        font-size: 30px;
+    }
+    .secondText {
+        font-size: 16px;
+    }
+    .firstBlock a {
+        font-size: 14px;
     }
 }
 @media (max-width: 540px) {
@@ -176,6 +246,15 @@ body {
         display: flex;
         cursor: pointer;
         margin-right: 20px;
+    }
+    .mainText {
+        font-size: 24px;
+    }
+    .secondText {
+        font-size: 12px;
+    }
+    .firstBlock a {
+        font-size: 10px;
     }
 }
 @media (max-width: 290px) {
