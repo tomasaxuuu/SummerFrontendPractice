@@ -265,7 +265,40 @@ main {
     padding-bottom: 40px;
     font-size: 17px;
 }
-@media (max-width: 1210px) {
+.fourblock {
+    padding-top: 185px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 100px;
+}
+.browserText {
+    text-align: left;
+    color: #8492af;
+    font-size: 17px;
+}
+.browserText h1 {
+    padding-bottom: 40px;
+    color: #0e1a35;
+    font-size: 40px;
+}
+.lorem {
+    padding-bottom: 40px;
+    width: 600px;
+}
+.li {
+    padding-bottom: 20px;
+    color: #5886ff;
+    font-size: 20px;
+}
+.li img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+@media (max-width: 1225px) {
     .buts {
         display: none;
     }
@@ -276,7 +309,7 @@ main {
         margin-right: 50px;
     }
 }
-@media (max-width: 700px) {
+@media (max-width: 830px) {
     .mainText {
         font-size: 30px;
     }
@@ -286,6 +319,17 @@ main {
     .firstBlock a {
         font-size: 14px;
     }
+    .secondBlock img {
+        width: 90%;
+    }
+    .buttonMenu {
+        width: 180px;
+    }
+}
+@media (max-width: 600px) {
+     .buttonMenu {
+         width: 150px;
+     }
 }
 @media (max-width: 540px) {
     .soc {
@@ -302,14 +346,25 @@ main {
     .mainText {
         font-size: 24px;
     }
-    .secondText {
-        font-size: 12px;
-    }
     .firstBlock a {
         font-size: 10px;
     }
 }
-@media (max-width: 290px) {
+@media (max-width: 500px) {
+    .buttonMenu {
+        width: 110px;
+    }
+}
+@media (max-width: 400px) {
+    .mainText {
+        width: 90%;
+        text-align: center;
+    }
+}
+@media (max-width: 355px) {
+    .buttonMenu {
+        width: 90px;
+    }
     .logo-text{
         display: none;
     }
