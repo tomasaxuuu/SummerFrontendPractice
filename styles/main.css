@@ -174,11 +174,13 @@ main {
     padding-bottom: 60px;
 }
 .buttonMain {
-    border: 2px solid #5584ff;
+    border: 2px solid dodgerblue;
     border-radius: 20px;
     padding: 10px;
     color:#ffffff;
-    text-decoration: none;
+    width: 170px;
+    text-align: center;
+    background-color:dodgerblue;
 }
 .firstBlock a {
     font-size: 18px;
