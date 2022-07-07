@@ -2,11 +2,12 @@
 	padding: 0;
 	margin: 0;
     border: 0;
+    box-sizing: border-box;
 }
 *,*:before,*:after{
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
+	
 }
 :focus,:active{outline: none;}
 a:focus,a:active{outline: none;}
@@ -58,8 +59,8 @@ body {
     align-items: center;
     flex: 1 1 auto;
     width: 100%;
-    height: 100px;
-    padding: 40px 0px 0px 20px;
+    height: 120px;
+    padding: 20px 20px 0px 20px;
 }
 .pages a {
     font-size: 20px;
@@ -83,77 +84,60 @@ body {
 .logo-text {
     color:white;
     font-size: 30px;
-    padding-top: 23px;
+    padding-top: 20px;
     padding-left: 10px;
 }
-.link-container {
-    display: flex;
-    justify-content: space-between;
-    width: 1000px;
-    -webkit-user-drag: none;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    overflow: hidden;
+li {
+    list-style-type: none; 
 }
-.buts {
-    width: 100px;
-    padding: 5px;
-    margin: 10px;
+.navbar {
+    min-height: 70px;
+    display: flex;
+    align-items:center;
     justify-content: center;
-    align-items: center;
-    color: white;
+}
+.nav-menu {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+#last {
+    border: 2px solid #5584ff;
+    border-radius: 20px;
+    color:#5584ff;
+    margin-left: 40px;
+}
+#last a {
+    color:#5584ff;
+}
+li a {
+    color:white;
+    text-decoration: none;
+    font-size: 15px;
+    width: 100px;
+    padding: 10px;
     background-color: transparent;
     background-repeat: no-repeat;
     text-align: center;
     display: inline-block;
-    text-decoration: none;
     cursor: pointer;
+    transition: 0.7s ease;
 }
-.buts:last-child {
-    border: 2px solid #5584ff;
-    border-radius: 20px;
-    color:#5584ff;
-}
-.buts:hover {
-    border: 2px solid #ffffff;
-    border-radius: 20px;
-    color:#ffffff;
-}
-.soc a:hover {
-    transform: scale(1.4);
-}
-.soc {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.5s;
-}
-.social {
-    display: inline-block;
-    margin-left: 10px;
-}
-.social img {
-    width: 25px;
-    height: 25px;
-}
-.url {
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    font-size: 18px;
-    color:white;
-    margin-right:20px;
-}
-.url a {
-    color:white;
+li a:hover {
+    color:dodgerblue;
 }
 .burger {
     display: none;
-    position: relative;
-    width: 50px;
-    height: 50px;
+    cursor: pointer;
+}
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color:white;
 }
 main {
     width: 100%;
@@ -272,6 +256,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: -30px;
     background-color:white;
 }
 .fourblock {
@@ -322,7 +307,6 @@ main {
     }
 }
 @media (max-width: 1200px) {
-    
     .imgbrows img {
         width: 80%;
     }
@@ -335,17 +319,47 @@ main {
         text-align: center;
     }
 }
-@media (max-width: 1225px) {
-    .buts, .soc {
-        display: none;
+@media (max-width: 800px) {
+    #header {
+        justify-content: space-between;
     }
     .burger {
-        position: relative;
-        display: flex;
-        cursor: pointer;
-        margin-right: 20px;
+        display: block;
+        z-index: 101;
     }
-}
+    .burger.active.bar:nth-child(2) {
+        opacity: 0;
+    }
+    .burger.active.bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .burger.active.bar:nth-child(3) {
+        transform: translateY(-8px) rotate(45deg);
+    }
+    .nav-menu {
+        position: fixed;
+        right: -100%;
+        top: 0px;
+        gap: 0;
+        flex-direction: column;
+        background-color:#8492af;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        z-index: 100;
+        height: 100%;
+    }
+    .nav-item, #last{
+        margin: 16px 0;
+        border:none;
+    }
+    #last a{
+        color:white;
+    }
+    .nav-menu.active {
+        right:0;
+    }
+}   
 @media (max-width: 830px) {
     .mainText {
         font-size: 30px;
@@ -370,29 +384,8 @@ main {
      .imgbrows img {
         width: 70%;
     }
-    /* .browserText {
-        font-size: 13px;
-    }
-    .browserText h1 {
-        font-size: 30px;
-    }
-    .lorem {
-        width: 400px;
-    }
-    .li {
-        font-size: 13px;
-    }
-    .li img {
-        display: none;
-    } */
 }
 @media (max-width: 540px) {
-    .soc {
-        display: none;
-    }
-    .link-container {
-        justify-content: space-between;
-    }
     .mainText {
         font-size: 24px;
     }
