@@ -362,16 +362,18 @@ main {
     text-align: center;
 }
 .status {
-    padding: 0px 50px 200px 50px;
+    padding: 0px 50px 300px 50px;
 }
 .status:first-child { 
     margin-right: 100px;
 }
 .but {
     background-color:#ccc;
-    width: 130px;
+    width: 170px;
     font-size: 1.5rem;
-    margin-top: 2rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    margin-top: 10px;
     border-radius: 4px;
     cursor: pointer;
 }
@@ -429,6 +431,10 @@ main {
     }
     .status:first-child {
         margin: 0px;
+        text-align: center;
+    }
+    .todo h1 {
+        width: 100%;
     }
 }
 @media (max-width: 800px) {
