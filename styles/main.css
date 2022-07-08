@@ -77,16 +77,6 @@ body {
 .logo {
     padding-bottom: 10px;
 }
-.logo img {
-    width: 70px;
-    height: 70px;
-}
-.logo-text {
-    color:white;
-    font-size: 30px;
-    padding-top: 20px;
-    padding-left: 10px;
-}
 li {
     list-style-type: none; 
 }
@@ -129,6 +119,7 @@ li a:hover {
 .burger {
     display: none;
     cursor: pointer;
+    margin-top: -5px;
 }
 .bar {
     display: block;
@@ -286,6 +277,7 @@ main {
 .lorem {
     padding-bottom: 40px;
     width: 60%;
+    line-height: 2;
     text-align: center;
 }
 .li {
@@ -441,7 +433,23 @@ main {
         width: 100%;
     }
 }
-@media (max-width: 800px) {
+
+@media (max-width: 830px) {
+    .mainText {
+        font-size: 30px;
+    }
+    .secondText {
+        font-size: 16px;
+    }
+    .firstBlock a {
+        font-size: 14px;
+    }
+    .secondBlock img {
+        width: 90%;
+    }
+    .buttonMenu {
+        width: 180px;
+    }
     #header {
         justify-content: space-between;
     }
@@ -481,6 +489,9 @@ main {
     .nav-menu.active {
         right:0;
     }
+}
+@media (max-width: 800px) {
+    
     .content {
         flex-direction: column;
     }
@@ -504,23 +515,7 @@ main {
         padding-left: 0px;
     }
 }   
-@media (max-width: 830px) {
-    .mainText {
-        font-size: 30px;
-    }
-    .secondText {
-        font-size: 16px;
-    }
-    .firstBlock a {
-        font-size: 14px;
-    }
-    .secondBlock img {
-        width: 90%;
-    }
-    .buttonMenu {
-        width: 180px;
-    }
-}
+
 @media (max-width: 600px) {
      .buttonMenu {
          width: 150px;
