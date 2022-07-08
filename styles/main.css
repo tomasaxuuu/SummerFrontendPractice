@@ -264,7 +264,6 @@ main {
 .fourblock {
     display: flex;
     padding-bottom: 200px;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
@@ -401,6 +400,11 @@ main {
 }
 .task span:hover {
     color: #ccc;
+}
+@media (max-width: 1800px) {
+    .fourblock {
+        flex-wrap: wrap;
+    }
 }
 @media (max-width: 1475px) {
     .fourblock {
