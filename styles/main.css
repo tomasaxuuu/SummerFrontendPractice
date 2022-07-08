@@ -314,7 +314,7 @@ main {
     display: flex;
     padding-top: 160px;
     padding-bottom: 200px;
-    justify-content: space-around;
+    margin-left: 190px;
 }
 .drag-text h1 {
     font-size: 60px;
@@ -347,7 +347,6 @@ main {
 }
 .todo {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 50%;
@@ -357,12 +356,17 @@ main {
     color:white;
     font-size: 30px;
     font-weight: medium;
+    width: 170px;
+    height: 100%;
+    padding: 5px;
+    text-align: center;
 }
 .status {
-    padding-bottom: 200px;
-    height: 100%;
+    padding: 0px 50px 200px 50px;
 }
-
+.status:first-child { 
+    margin-right: 100px;
+}
 .but {
     background-color:#ccc;
     width: 130px;
@@ -373,6 +377,28 @@ main {
 }
 .but:hover {
     background-color:#aaa;
+}
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background-color:#fff;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+.task span {
+    position: relative;
+    top: 0rem;
+    right: -0.5rem;
+    font-size: 2rem;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+.task span:hover {
+    color: #ccc;
 }
 @media (max-width: 1475px) {
     .fourblock {
@@ -392,6 +418,17 @@ main {
     }
     .browserText {
         text-align: center;
+    }
+}
+@media (max-width: 1335px) {
+    .todo {
+        flex-direction: column;
+    }
+    .content {
+        margin-left: 0px;
+    }
+    .status:first-child {
+        margin: 0px;
     }
 }
 @media (max-width: 800px) {
@@ -433,6 +470,28 @@ main {
     }
     .nav-menu.active {
         right:0;
+    }
+    .content {
+        flex-direction: column;
+    }
+    .drag-text {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+    }
+    .lorem-text {
+        text-align: center;
+    }
+    .todo {
+        width: 100%;
+    }
+    .todo h1 {
+        width: 100%;
+    }
+    .status {
+        padding-right: 0px;
+        padding-left: 0px;
     }
 }   
 @media (max-width: 830px) {
@@ -477,6 +536,9 @@ main {
     .mainText {
         width: 90%;
         text-align: center;
+    }
+    .drag-text h1 {
+        font-size: 40px;
     }
 }
 @media (max-width: 355px) {
