@@ -265,6 +265,8 @@ main {
     display: flex;
     padding-bottom: 200px;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 .browserText {
     text-align: left;
@@ -300,6 +302,77 @@ main {
 }
 .imgbrows img {
     height: 100%;
+}
+.dragdrop {
+    max-width: 1800px;
+    width: 100%;
+    height: 757px;
+    margin: 0 auto;
+    height: 100%;
+}
+.content {
+    display: flex;
+    padding-top: 160px;
+    padding-bottom: 200px;
+    justify-content: space-around;
+}
+.drag-text h1 {
+    font-size: 60px;
+    padding-bottom: 50px;
+}
+.drag-text {
+    color: white;
+    width: 50%;
+}
+.lorem-text {
+    line-height: 2;
+    font-size: 20px;
+    color: #8492af;
+    width: 70%;
+    padding-bottom: 50px;
+}
+.arrow {
+    display: flex;
+    justify-content: start;
+    gap: 15px;
+    align-items: center;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;  
+}
+.left, .right {
+    cursor: pointer;
+}
+.todo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+.todo h1 {
+    color:white;
+    font-size: 30px;
+    font-weight: medium;
+}
+.status {
+    padding-bottom: 200px;
+    height: 100%;
+}
+
+.but {
+    background-color:#ccc;
+    width: 130px;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.but:hover {
+    background-color:#aaa;
 }
 @media (max-width: 1475px) {
     .fourblock {
