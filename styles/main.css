@@ -37,7 +37,7 @@ img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
 html {
-    background-image: url(../images/bg1.jpg);
+    background-image: url(../images/Prostokąt\ 19.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
@@ -50,6 +50,18 @@ body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     overflow-x: hidden; 
 }
+
+body::-webkit-scrollbar {
+    width: 12px;               /* ширина scrollbar */
+  }
+  body::-webkit-scrollbar-track {
+    background: rgb(255, 255, 255);        /* цвет дорожки */
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: #8492af;    /* цвет плашки */
+    border-radius: 20px;       /* закругления плашки */
+    border: 1px solid #5584ff;  /* padding вокруг плашки */
+  }
 .fixed {
     max-width: 1800px;
     margin: 0 auto;
@@ -115,7 +127,7 @@ li a {
     transition: 0.7s ease;
 }
 li a:hover {
-    color:dodgerblue;
+    color: #8492af;
 }
 .burger {
     display: none;
@@ -585,7 +597,7 @@ main img {
     flex:1 1 auto;
     max-width: 100%;
     margin: 0 auto;
-    padding-bottom: 200px;
+    padding-bottom: 130px;
 }
 .final_width {
     width: 100%;
@@ -605,6 +617,7 @@ main img {
     gap: 140px;
     padding: 20px;
     flex-wrap: wrap;
+    padding-bottom: 100px;
 }
 .priceli h1 {
     color: #0e1a35;
@@ -657,6 +670,91 @@ main img {
 .liprices {
     padding-bottom: 20px;
 }
+.final_mini_block {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    width: 100%;
+}
+.final_text {
+    width: 43%;
+    color:#8492af;
+    font-size: 16px;
+    text-align: center;
+    padding-bottom: 65px;
+    line-height: 1.7;
+}
+.final_button {
+    background-color: dodgerblue;
+    border: 1px solid dodgerblue;
+    border-radius: 24px;
+    width: 200px;
+    height: 48px;
+    overflow: hidden;
+    text-align: center;
+}
+.butt span {
+    display: inline-block;
+    vertical-align: middle;
+}
+.butt::before, .butt::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    height: 1px;
+    background-color: #cfd3da;
+    position: relative;
+}
+.butt:before {
+    margin-left: -100%;
+    left: -14px;
+}
+.butt:after {
+    margin-right: -100%;
+    right: -14px;
+}
+.final_button a {
+    color:#ffffff;
+    font-size: 16px;
+}
+.footer_menu {
+    max-width: 1800px;
+    margin: 0 auto;
+}
+#footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1 1 auto;
+    width: 100%;
+    height: 150px;
+}
+.rights {
+    color:#8492af;
+    font-size: 16px;
+}
+.footer_menu .link {
+    color: #8492af;
+    font-size: 16px;
+}
+.footer_menu .link:hover {
+    color: white;
+}
+.soc a:hover {
+    transform: scale(1.4);
+}
+.soc {
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+    gap: 20px;
+    text-align: center;
+}
+.social {
+    display: inline-block;
+}
 @media (max-width: 1800px) {
     .fourblock {
         flex-wrap: wrap;
@@ -708,17 +806,19 @@ main img {
     .psd_img img {
         width: 90%;
     }
+    #footer .navbar, #footer .soc {
+        display:none;
+    }
+    #footer {
+        display: flex;
+        align-items: center;
+        flex: 1 1 auto;
+        justify-content: center;
+        width: 100%;
+        height: 150px;
+    }
 }
 
-@media (max-width: 410px) {
-    .liprices {
-        font-size: 15px;
-    }
-    .priceli li img {
-        width: 15px;
-        height: 15px;
-    }
-}
 @media (max-width: 830px) {
     .mainText {
         font-size: 30px;
@@ -802,6 +902,12 @@ main img {
     }
 }   
 
+@media (max-width: 700px) {
+    .butt::before, .butt::after {
+        display: none;
+    }
+}
+
 @media (max-width: 600px) {
      .buttonMenu {
          width: 150px;
@@ -826,6 +932,16 @@ main img {
     }
     #todo_form.modal.active {
         width: 80%;
+    }
+}
+
+@media (max-width: 410px) {
+    .liprices {
+        font-size: 15px;
+    }
+    .priceli li img {
+        width: 15px;
+        height: 15px;
     }
 }
 
