@@ -7,7 +7,6 @@
 *,*:before,*:after{
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
-	
 }
 :focus,:active{outline: none;}
 a:focus,a:active{outline: none;}
@@ -755,6 +754,20 @@ main img {
 .social {
     display: inline-block;
 }
+/* .dropHere {
+    color:rgb(117, 100, 100);
+    font-size: 20px;
+    padding-top: 100px;
+}
+.dropHere {
+    pointer-events: none;
+}
+#compl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} */
 @media (max-width: 1800px) {
     .fourblock {
         flex-wrap: wrap;
